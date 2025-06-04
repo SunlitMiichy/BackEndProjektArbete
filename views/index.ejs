@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://kit.fontawesome.com/9bc0025a3d.js" crossorigin="anonymous"></script>
+
+  </head>
+<body>
+
+  <header>
+    <%- include('partials/header') %>
+  </header>
+
+  <main>
+
+    <%- include('partials/mainlist') %>
+
+    <%- include('partials/herobox', { heroImage: heroImage }) %>
+
+    <%- include('partials/spots') %>
+
+    <%- include('partials/gallery', { products: products }) %>
+
+    <%- include('partials/underIcons') %>
+
+  </main>
+
+  <footer class="main-footer">
+    <%- include('partials/footer') %>
+  </footer>
+
+</body>
+</html>

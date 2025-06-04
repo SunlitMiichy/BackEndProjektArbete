@@ -1,0 +1,132 @@
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   
+   
+   body {
+     font-family: Arial, sans-serif;
+     line-height: 1.5;
+   }
+
+/*-------------Header Början -----------------*/
+   .layout {
+    display: grid;
+    grid-template-areas:
+      "top-header top-header"
+      "side-header main-content";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+  }
+  
+  .top-header {
+    grid-area: top-header;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+  }
+  
+  .side-header {
+    grid-area: side-header;
+    background-color: #555;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .main-content {
+    grid-area: main-content;
+    padding: 20px;
+  }
+  
+/*-------------Header Slutar -----------------*/
+
+
+  
+ .newproduct-header {
+  display: flex;
+  padding: 20px;
+ }
+
+
+.name-textbox {
+     margin: 20px;
+     display: flex;
+     flex-direction: column;
+     max-width: 250px;
+}
+
+.name-textbox label {
+     font-weight: bold;
+     margin-bottom: 5px;
+   }
+
+.name-textbox textarea {
+     width: 100%;
+     min-height: 50px;
+     padding: 10px;
+     border: 2px solid black;
+     border-radius: 5px;
+     font-size: 16px;
+   }
+
+.about-textbox {
+     margin: 20px;
+     display: flex;
+     flex-direction: column;
+     max-width: 600px;
+   }
+   
+   .about-textbox label {
+     font-weight: bold;
+     margin-bottom: 5px;
+   }
+   
+   .about-textbox textarea {
+     width: 80%;
+     min-height: 150px;
+     padding: 10px;
+     border: 2px solid black;
+     border-radius: 5px;
+     font-size: 16px;
+   }
+ 
+   .myfile {
+    display: flex;
+    margin: 15px;
+   }
+
+   input[type="file"] {
+    width: 55px;        /* Döljer texten som kommer efter välj fil knappen */
+    overflow: hidden;
+  }
+
+   .sku {
+    margin: 15px;
+   }
+
+   .sku-text {
+    display: flex;
+    margin: 15px;
+   }
+   .numberof-products {
+    display: flex;
+    margin: 15px;
+   }
+
+   p {
+    font-weight: bold;
+   }
+
+   .addButton {
+    padding: 15px;
+   }
+
+   .copyright {
+    text-align: center;
+    margin: 4rem;
+  }
+  

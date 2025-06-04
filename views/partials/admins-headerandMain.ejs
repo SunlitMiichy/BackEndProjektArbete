@@ -1,0 +1,57 @@
+<div class="layout">
+    <header class="top-header">
+        <h2>Administration</h2>
+    </header>
+
+    <aside class="side-header">
+
+        <h2>Produkter</h2>
+    </aside>
+
+
+        <main class="main-content">
+
+        <h2 class="newproduct-header">Ny produkt</h2>
+        <div class="name-textbox">
+            <label for="name-input">Namn</label>
+            <textarea id="name-input"></textarea>
+        </div>
+
+        <section>
+            <div class="about-textbox">
+                <label for="description-input">Beskrivning</label>
+                <textarea id="description-input"></textarea>
+            </div>
+        </section>
+
+<section class="myfile">
+    <form>
+        <p>Bild</p>
+        <input type="text" id="myfile" name="myfile" placeholder="Klistra in bildens URL här">
+        <div id="imagePreview" style="margin-top: 10px;"></div>
+    </form>
+</section>
+
+    <script src="/js/index.js" defer></script>
+
+
+        <p class="sku">Märke</p>
+        <input class="sku-text" type="text">
+
+        <p class="sku">SKU</p>
+        <input class="sku-text" type="text">
+
+        <section class="numberof-products">
+            <form id="numberform">
+                <p>Pris</p>
+                <input type="number" name="products" min="1" max="100000000000000000">
+            </form>
+        </section>
+
+        <section class="addButton">
+            <button type="button">Lägg till</button>
+        </section>
+    </main>
+
+</div>
+ 

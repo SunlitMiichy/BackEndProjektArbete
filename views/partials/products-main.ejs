@@ -1,0 +1,42 @@
+<div class="layout">
+    <header class="top-header">
+        <h2>Administration</h2>
+    </header>
+
+    <aside class="side-header">
+
+        <h2>Produkter</h2>
+    </aside>
+
+
+        <main class="main-content">
+
+    <div class="product-header">
+    <h2>Produkter</h2>
+    <a href="/admin">
+     <button type="button" class="new-product-btn">Ny Produkt</button>
+     </a>
+    </div>
+
+              <table class="table-container">
+                <thead>
+                    <tr>
+                        <th>Namn</th>
+                        <th>SKU</th>
+                        <th>Pris</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% clothingProducts.forEach(clothingProduct => { %>
+                    <tr>
+                        <td><%= clothingProduct.productName %></td>
+                        <td><%= clothingProduct.sku %></td>
+                        <td><%= clothingProduct.price %></td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+    </main>
+
+</div>
+ 

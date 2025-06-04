@@ -1,0 +1,116 @@
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+   }
+   
+   
+   
+   body {
+     font-family: Arial, sans-serif;
+     line-height: 1.5;
+   }
+
+/*-------------Header Början -----------------*/
+   .layout {
+    display: grid;
+    grid-template-areas:
+      "top-header top-header"
+      "side-header main-content";
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 60px 1fr;
+    height: 100vh;
+  }
+  
+  .top-header {
+    grid-area: top-header;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+  }
+  
+  .side-header {
+    grid-area: side-header;
+    background-color: #555;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .main-content {
+    grid-area: main-content;
+    padding: 20px;
+  }
+  
+/*-------------Header Slutar -----------------*/
+
+  
+  .product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+
+ 
+   .copyright {
+    text-align: center;
+    margin: 4rem;
+  }
+
+  /*-------------Tabell Börjar -----------------*/
+
+    .table-container {
+      min-width: 800px;
+    }
+
+   .table {
+    width: 100%;
+    border-collapse: collapse;
+    min-height: 500px;
+
+  }
+  th, td {
+    border: 1px solid gray;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: lightgray;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: white;
+  }
+
+ 
+   .copyright {
+    text-align: center;
+    margin: 4rem;
+  }
+  
+  /*-------------Tabell Slutar -----------------*/
+
+    /*-------------Knapp Börjar -----------------*/
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-product-btn {
+  padding: 0.5rem 1rem;
+  background-color: gray; 
+  color: whitesmoke;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+  /*-------------Knapp Börjar -----------------*/
+

@@ -1,0 +1,653 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+  }
+    
+  /*------------* Header Börjar------------* */
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+  width: 100%;
+}
+
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Sprider ut sökfält & ikoner */
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.search-form {
+  flex: 1; /* Gör att form tar upp all plats den kan */
+}
+
+.search-bar {
+  width: 100%;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px; /* Ändra till zoom om du vill ha exakt förstoring */
+}
+  
+  
+  /*------------* Header Slutar------------* */
+  
+  
+  /* ------------*Listan Börjar------------* */
+  
+  .main-list ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  .main-list li {
+    margin: 5px 5px;
+  
+  }
+  
+  .main-list a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  /* ------------*Listan slutar------------* */
+  
+  /* ------------*Hero börjar------------* */
+  
+  .hero-content {
+    display: flex;
+    position: relative;
+    height: 400px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    top: 10px;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+    margin: 20px;
+  }
+  
+  .overlay-heart2 {
+    position: absolute;
+    top: 350px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+  }
+  
+  .section, h2, p, h3 {
+    margin: 20px;
+    text-align: left;
+  }
+  
+  .levisGray {
+    color: gray;
+  }
+  
+  .add-to-cart-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .add-to-cart-btn {
+    background-color: gray;
+    color: black;
+    padding: 15px 200px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 8px;
+    align-items: center;
+  }
+  
+  
+  
+  /* ------------*Hero Slutar------------* */
+  
+  
+  
+  /* göm kort: 
+  .image-item:nth-child(n+5) {
+    display: none;
+  }
+  */
+  
+  
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .product-box {
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+    overflow: hidden;
+  }
+  
+  .heading-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .product-content {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  
+  .product-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  .upper-text {
+    display: flex; 
+    justify-content: space-between; 
+    width: 100%; 
+  }
+  
+  .bottom-text {
+    margin-left: 1px;
+    margin-bottom: 1px;
+  }
+  
+  
+  /* ------------*Under icons Börjar------------* */
+  .under-icons {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    gap: 10px;
+  }
+  
+  .under-icons a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    gap: 8px;
+  }
+  
+  .under-icons i {
+    margin-right: 12px;
+    font-size: 50px;
+  }
+  
+  .bottom-text {
+    text-align: left;
+    color: gray;
+  }
+  
+  /* ------------*Under icons Slutar------------* */
+  
+  
+  .footer-container {
+    /* Kanske kan tas bort */
+    background-color: gray;
+    padding: 4rem;
+  }
+  
+  /* ------------*Accordion Börjar ------------**/
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px;
+  
+  
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+  
+  }
+  
+  
+  .accordion-header {
+    display: flex;
+    background: #7c8186;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  
+  }
+  
+  .accordion-content {
+    display: none;
+    padding: 10px;
+    background: #f1f1f1;
+  
+  }
+  
+  .accordion-content a p {
+    color: black;
+  
+  
+  }
+  
+  .accordion-content a {
+    text-decoration: none;
+  
+  }
+  
+  
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked+.accordion-content {
+    display: block;
+  }
+  
+  
+  /*------------Footer List Börjar------------ */
+  
+  .footer-list {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    gap: 100px;
+  }
+  
+  .firstlist li {
+    list-style: none;
+  
+  
+  }
+  
+  .secondlist li,
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .thirdlist li,
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .main-footer {
+    background-color: rgba(197, 193, 193, 0.726);
+    padding: 10px;
+  }
+  
+  
+  /*------------Footer List Slutar------------ */
+  
+  
+  /*------------* Accordion Slutar--------------*/
+  
+  .copyright {
+    text-align: center;
+    margin: 4rem;
+  }
+  
+  /* ------------*Media Börjar---------------*/
+  
+  
+  
+  
+  /* -----------Under icons Börjar ----------*/
+  @media (min-width: 640px) {
+    .under-icons {
+      display: grid;
+      margin: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 24px;
+      
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .under-icons {
+      display: grid;
+      margin: 40px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px 24px;
+     
+    }
+  }
+  
+  /* -----------Under icons Slutar ----------*/
+  
+  
+  /* -----------List Börjar ----------*/
+  
+  
+  @media (min-width: 640px) {
+    .main-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .main-list ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* -----------List Slutar ----------*/
+  
+  /*-------Logo börjar ---------------*/
+  
+  /*
+    
+    .header-container {
+      border: 8px solid black;
+    }
+  */
+  @media (max-width: 640px) {
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+  
+  
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 10px;
+    }
+  
+    /* Bör vara på samma rad nu */
+    .search-container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    /* Searchbar bör vara på vänster sida nu*/
+    .search-bar {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+  
+    .icons {
+      display: flex;
+      gap: 15px;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+  }
+  
+  
+  /*-------Logo Slutar ---------------*/
+  
+  /*-------Searchbar Börjar ---------------*/
+  
+  
+  /* Be läraren om hjälp*/
+  @media (min-width: 640px) {
+    .header-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  
+    .logo {
+      flex-shrink: 0;
+      margin-right: 1rem;
+      justify-content: flex-start;
+      width: auto;
+    }
+  
+    .search-container {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+    }
+  
+    .search-bar {
+      width: 100%;
+      max-width: 400px;
+    }
+  
+    .icons {
+      justify-content: flex-end;
+      flex-shrink: 0;
+      gap: 1rem;
+      width: auto;
+    }
+  }
+  
+  
+  /* ----------Hero börjar Media ------------*/
+  @media (min-width: 1024px) {
+    .hero-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .hero-content {
+      order: 2;
+      width: 50%;
+      height: auto;
+    }
+  
+    .hero-content img {
+      width: 100%;
+      height: auto;
+    }
+  
+    section {
+      order: 1;
+      width: 45%;
+    }
+  
+    section h2,
+    section p {
+      text-align: center;
+    }
+  
+  }
+  
+  
+  
+  /*-------Media Accordian Börjar ----------*/
+  
+  @media (min-width: 640px) {
+    .accordion:nth-child(-n+3) {
+      display: none;
+  
+    }
+  }
+  
+  /*-------Media Accordian Slutar ----------*/
+  
+  /*-------Media List Börjar ----------*/
+  @media (max-width: 640px) {
+    .footer-list:nth-child(-n+3) {
+      display: none;
+    }
+  }
+  
+  /*-------Media List Slutar ----------*/
+  
+  /*-------Media Heart icon Börjar ----------*/ 
+  
+  @media (min-width: 640px) {
+    .overlay-heart2:nth-child(n-3) {
+      display: none; 
+    }
+  
+  }
+  /*-------Media Heart icon Slutar ----------*/ 
+  
+  
+  
+  
+  @media (min-width: 640px) {
+  
+    .hero-box {
+      display: flex;
+      flex-direction: row; 
+      align-items: flex-start;
+      gap: 20px; 
+      padding: 20px;
+      margin: 10px;
+    }
+    
+    .hero-content {
+      position: relative;
+      flex: 0 0 50%;  
+    }
+    
+    .hero-content img {
+      width: 100%;  
+      height: auto; 
+      display: block;
+    }
+    
+  
+    section {
+      flex: 1 1 50%; 
+      padding: 0;
+    }
+    
+    h2, p, h3 {
+      margin: 10px; 
+    }
+  
+    h3 {
+      margin-top: 40px;
+    }
+    
+    .add-to-cart-btn { 
+      display: flex; 
+      margin-right: 200px;
+      background-color: gray;
+      color: black;
+      padding: 10px 50px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer; 
+      text-align: center;
+    }
+    
+  }
+  
+  
+  @media (min-width: 1024px) {
+    .hero-box {
+      display: flex;
+      flex-direction: row-reverse; 
+      align-items: flex-start;
+      gap: 20px; 
+      padding: 20px;
+      margin: 10px;
+  
+    }
+    
+    .hero-content {
+      position: relative;
+      flex: 0 0 50%;  
+    }
+    
+    .hero-content img {
+      width: 100%;  
+      height: auto; 
+      display: block;
+    }
+    
+  
+    section {
+      flex: 1 1 50%; 
+      padding: 0;
+  
+    }
+    .section, h2, p, h3 {
+      display: flex;
+      text-align: left;
+    }
+    
+    
+  
+    h3 {
+      margin-top: 40px;
+      text-align: left;
+  
+    }
+    
+    .add-to-cart-btn { 
+      display: flex; 
+      margin-right: 200px;
+      background-color: gray;
+      color: black;
+      padding: 10px 50px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer; 
+      text-align: center;
+    }
+    
+  }
+  
+  /*------Product Box Media Början ------------*/ 
+  
+  @media (max-width: 639px) {
+    .product-box {
+      display: none;
+    }
+  }
+  
+  /* Product Box Media Slut ------------------*/
+  

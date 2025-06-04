@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS products (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name TEXT,
+  sku TEXT,
+  price INTEGER,
+  image TEXT
+);
+

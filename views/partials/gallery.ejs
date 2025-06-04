@@ -1,0 +1,20 @@
+<div class="gallery">
+  <% products.forEach(product => { %>
+    <div class="image-container">
+      <a href="/products/<%= product.id %>">
+        <img src="images/<%= product.image %>" alt="<%= product.productName %>">
+      </a>
+      <span class="overlay-heart">
+        <i class="fa-solid fa-heart"></i>
+      </span>
+      <div class="gallery-footer">
+        <div class="upper-text">
+          <h4><%= product.productName %></h4>
+          <h4><%= product.price %> SEK</h4>
+        </div>
+        <p class="bottom-text">Levis</p>
+      </div>
+    </div>
+  <% }); %>
+</div>
+
