@@ -13,21 +13,31 @@ router.get('/', function (req, res) {
   ];
   const randomImage = heroImages[Math.floor(Math.random() * heroImages.length)];
 
-  
-// Raden under ser till att det bara hämtas 8 produktkort då det finns 9 i tabellen
-  db.all('SELECT * FROM products LIMIT 8', [], (err, products) => { 
+  // Först: hämta produkter
+  db.all('SELECT * FROM products LIMIT 8', [], (err, products) => {
     if (err) {
       console.error(err);
       return res.send("Fel vid hämtning av produkter");
     }
 
-    res.render('index', {
-      title: 'Startsidan',
-      heroImage: randomImage,
-      products: products
+    // Sedan: hämta spots
+    db.all('SELECT * FROM spots', [], (err2, spots) => {
+      if (err2) {
+        console.error(err2);
+        return res.send("Fel vid hämtning av spots");
+      }
+
+      // Nu kör vi render när båda är klara
+      res.render('index', {
+        title: 'Startsidan',
+        heroImage: randomImage,
+        products: products,
+        spots: spots
+      });
     });
   });
 });
+
 
 // Adminsidan
 router.get('/admin', function (req, res) {
@@ -99,8 +109,10 @@ router.get('/search', (req, res) => {
 //SPOTS 
 
 
-
 module.exports = router;
+
+
+
 
 
 

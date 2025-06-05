@@ -1,22 +1,8 @@
-      <div class="spot-box">
-        <div class="spot-container"> 
-          <img src="https://placehold.co/600x400.png" alt="spot1">
-          <div>
-            <h3>Lorem ipsum dolor</h3>
-          </div>
-      </div>
-      <div class="spot-container"> 
-        <img src="https://placehold.co/600x400.png" alt="spot2">
-        <div>
-          <h3>Lorem ipsum dolor</h3>
-        </div>
-    </div>
-    <div class="spot-container"> 
-      <img src="https://placehold.co/600x400.png" alt="spot3">
-      <div>
-        <h3>Lorem ipsum dolor</h3>
-      </div>
-  </div>
-    </div>
-
- 
+<div class="spot-container">
+  <% spots.forEach((spot, index) => { %>
+    <a href="<%= spot.link %>" class="spot spot<%= index + 1 %>">
+      <img src="<%= spot.image %>" alt="<%= spot.title %>">
+      <h3 class="spot-title"><%= spot.title %></h3>
+    </a>
+  <% }) %>
+</div>
