@@ -38,6 +38,28 @@ router.get('/', function (req, res) {
   });
 });
 
+// search-result.ejs sidan 
+
+
+router.get('/search', (req, res) => {
+  const searchTerm = req.query.q || '';
+  const sql = `SELECT * FROM products WHERE name LIKE ? LIMIT 3`;
+  const values = [`%${searchTerm}%`];
+
+  db.all(sql, values, (err, rows) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Fel vid sökning");
+    }
+
+    res.render('search-result', {
+      title: `Sökresultat för "${searchTerm}"`,
+      products: rows,
+      searchTerm
+    });
+  });
+});
+
 
 // Adminsidan
 router.get('/admin', function (req, res) {
@@ -55,8 +77,8 @@ router.get('/product-details', function (req, res) {
 // Produkter – Adminvy (hårdkodad lista)
 router.get('/products', function (req, res) {
   const clothingProducts = [
-    { id: 1, productName: "Svart T-Shirt", sku: "SVA123", price: "199" },
-    { id: 2, productName: "Vit T-Shirt", sku: "VIT123", price: "199" }
+    { id: 1, name: "Svart T-Shirt", sku: "SVA123", price: "199" },
+    { id: 2, name: "Vit T-Shirt", sku: "VIT123", price: "199" }
   ];
 
   res.render('products', {
@@ -80,7 +102,7 @@ router.get('/products/:id', function (req, res) {
     }
 
     res.render('product-details', {
-      title: product.productName,
+      title: product.name,
       product: product
     });
   });

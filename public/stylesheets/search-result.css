@@ -30,7 +30,7 @@ body {
 .search-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Sprider ut sökfält & ikoner */
+  justify-content: space-between; /* Ikoner hamnar längst till höger */
   width: 100%;
   padding: 0 10px;
   margin-top: 10px;
@@ -38,7 +38,7 @@ body {
 }
 
 .search-form {
-  flex: 1; /* Gör att form tar upp all plats den kan */
+  flex: 1; 
 }
 
 .search-bar {
@@ -53,7 +53,7 @@ body {
 .icons {
   display: flex;
   gap: 15px;
-  font-size: 20px; /* Ändra till zoom om du vill ha exakt förstoring */
+  font-size: 20px; 
 }
 
 
@@ -82,83 +82,12 @@ body {
 
 /* ------------*Listan slutar------------* */
 
-/* ------------*Hero börjar------------* */
 
-
-.hero-content {
-  display: flex;
-  height: 400px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-  top: 10px;
+h1 {
+    text-align: center;
+    padding-top: 20px;
 }
 
-.hero img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
-
-h2 {
-  margin: 10px;
-  text-align: center;
-}
-
-p {
-  margin: 10px;
-  text-align: center;
-}
-
-/* ------------*Hero Slutar------------* */
-
-
-
-/* göm kort: 
-.image-item:nth-child(n+5) {
-  display: none;
-}
-*/
-
-/*------------Spots Börjar------------*/ 
-
-.spot-container {
-  display: flex;
-  width: 100%;
-  gap: 10px;
-  margin: 20px;
-  justify-content: space-evenly;
-  box-sizing: border-box;
-}
-
-.spot {
-  position: relative; 
-  flex: 1;
-  overflow: hidden;
-}
-
-.spot img {
-  width: 90%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
-.spot-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  margin: 0;
-}
-
-/*------------Spots Slutar------------/*
 
 /*------------* Galleri Börjar ------------**/
 /* ------------*Text för Galleri Börjar------------* */
@@ -190,7 +119,6 @@ p {
   display: flex;
   flex-direction: column;
   padding: 10px;
-  
 }
 
 .gallery-footer .upper-text {
@@ -253,7 +181,7 @@ p {
 /* ------------*Under icons Slutar------------* */
 
 
-.footer-container { /* Kanske kan tas bort */
+.footer-container { 
   background-color: gray;
   padding: 4rem;
 }
@@ -357,41 +285,6 @@ input[type="checkbox"]:checked+.accordion-content {
 }
 
 /* ------------*Media Börjar---------------*/
-
-/* ------------*Galleri Börjar--------------- */
-
-.image-container:nth-last-child(-n+4) {
-  display: none;
-}
-
-@media (min-width: 640px) {
-
-  .image-container,
-  .image-container:nth-last-child(-n+4) {
-    display: grid;
-  }
-}
-
-
-
-@media (min-width: 640) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-
-
-@media (min-width: 1024px) {
-  .gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* ------------*Galleri Slutar------------* */
-
-
-
 /* -----------Under icons Börjar ----------*/
 @media (min-width: 640px) {
   .under-icons {
@@ -415,9 +308,7 @@ input[type="checkbox"]:checked+.accordion-content {
 
 /* -----------Under icons Slutar ----------*/
 
-
 /* -----------List Börjar ----------*/
-
 
 @media (min-width: 640px) {
   .main-list {
@@ -433,6 +324,7 @@ input[type="checkbox"]:checked+.accordion-content {
   }
 }
 
+
 @media (min-width: 1024px) {
   .main-list ul {
     display: grid;
@@ -444,12 +336,7 @@ input[type="checkbox"]:checked+.accordion-content {
 
 /*-------Logo börjar ---------------*/
 
-/*
-  
-  .header-container {
-    border: 8px solid black;
-  }
-*/
+
 @media (max-width: 640px) {
   .logo img {
     width: 100%;
@@ -529,55 +416,6 @@ input[type="checkbox"]:checked+.accordion-content {
   }
 }
 
-
-/* ----------Hero börjar Media ------------*/ 
-@media (min-width: 1024px) {
-  .hero-box {
-    display: flex;
-    flex-direction: row; 
-    justify-content: flex-end; 
-    align-items: center;
-  }
-
-  .hero-content {
-    order: 2; 
-    width: 50%; 
-    height: auto;
-    display: flex;
-  }
-
-  .hero-content img {
-    width: 100%; 
-    height: auto; 
-  }
-  section {
-    order: 1; 
-    width: 45%;   
-  }
-    section {
-    position: absolute;
-    bottom: 600px; /* justera värdet efter behov */
-    padding-left: 10px;
-  }
-
-  section h2, p {
-    text-align: center;
-  }
-}
-
-/*-------Media Spots Börjar ----------*/
-/*-------Media Spots 1023px ----------*/
-
-@media (max-width: 1023px) {
-  .spot-container:nth-last-child(-n+4) {
-    display: none;
-  }
-}
-/*------Media Spots 1024px----------*/
-
-
-/*-------Media Spots Slutar ----------*/
-
 /*-------Media Accordian Börjar ----------*/
 
 @media (min-width: 640px) {
@@ -586,7 +424,6 @@ input[type="checkbox"]:checked+.accordion-content {
 
   }
 }
-
 /*-------Media Accordian Slutar ----------*/
 
 /*-------Media List Börjar ----------*/
@@ -600,8 +437,3 @@ input[type="checkbox"]:checked+.accordion-content {
 
 
 
-/*
-.hero-box {
-  border: 8px solid black;
-}
-*/

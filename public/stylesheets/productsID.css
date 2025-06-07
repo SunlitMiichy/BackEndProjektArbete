@@ -373,6 +373,13 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+
+  @media (min-width: 641px) {
+  .main-list ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
   
   @media (min-width: 1024px) {
     .main-list ul {
@@ -385,12 +392,6 @@
   
   /*-------Logo börjar ---------------*/
   
-  /*
-    
-    .header-container {
-      border: 8px solid black;
-    }
-  */
   @media (max-width: 640px) {
     .logo img {
       width: 100%;
